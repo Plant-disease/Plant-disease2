@@ -18,6 +18,23 @@
         <!--        <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>-->
     </properties>
     <dependencies>
+
+        <dependency>
+           <groupId>com.opencv-480.jar</groupId>
+           <artifactId>opencv-server</artifactId>
+           <version>1.0.0</version>
+           <scope>system</scope>
+           <systemPath>${pom.basedir}/src/libs/opencv-480.jar</systemPath>
+       </dependency>
+
+       <!-- &lt;!&ndash; https://mvnrepository.com/artifact/org.openpnp/opencv &ndash;&gt;
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>4.8.1-0</version>
+        </dependency>-->
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>

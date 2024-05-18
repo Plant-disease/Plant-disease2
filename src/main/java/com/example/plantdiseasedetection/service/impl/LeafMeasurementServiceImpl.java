@@ -7,9 +7,9 @@ import com.example.plantdiseasedetection.payload.VeinFeatures;
 import com.example.plantdiseasedetection.service.ImageProcessing;
 import com.example.plantdiseasedetection.service.LeafMeasurementService;
 import lombok.RequiredArgsConstructor;
-/*import org.opencv.core.*;
+import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;*/
+import org.opencv.imgproc.Imgproc;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -26,17 +26,9 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class LeafMeasurementServiceImpl implements LeafMeasurementService {
-    @Override
-    public List<LeafMeasurement> getLeafMeasurementToSaveDB(LeafData leafData, List<Attachment> attachmentList) {
-        return List.of();
-    }
 
-    @Override
-    public List<LeafMeasurement> getLeafMeasurementToCheckKNN(List<Attachment> attachmentList) {
-        return List.of();
-    }
 
-    /*@Value("${attachment.second.package.url}")
+    @Value("${attachment.second.package.url}")
     String packageUrl;
 
     private final ImageProcessing imageProcessing;
@@ -745,6 +737,6 @@ public class LeafMeasurementServiceImpl implements LeafMeasurementService {
         double crossProduct = (p2.x - p1.x) * (p3.y - p1.y) - (p3.x - p1.x) * (p2.y - p1.y);
         if (crossProduct == 0) return 0; // Collinear
         return (crossProduct > 0) ? 1 : -1; // Clockwise or counterclockwise
-    }*/
+    }
 
 }
